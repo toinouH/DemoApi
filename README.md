@@ -1,7 +1,7 @@
 ================================================================================
 README - DemoApi
 GUIDE COMPLET - CRÉER UNE API ASP.NET CORE AVEC C#
-Projet DemoApi - Guide pour Débutants
+Projet PRODUCT API - Guide pour Débutants
 ================================================================================
 
 Ce guide vous accompagne étape par étape pour créer votre première API web
