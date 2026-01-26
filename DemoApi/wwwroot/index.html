@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DemoApi - Product Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .filter-section {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .filter-section h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .filter-controls .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .products-section h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .products-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .product-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-update {
+            background: #28a745;
+        }
+
+        .btn-update:hover {
+            background: #218838;
+        }
+
+        .message {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📦 DemoApi - Product Manager</h1>
+
+    <div id="message" class="message"></div>
+
+    <div class="form-section">
+        <h2>Add New Product</h2>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="name" required minlength="1" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" name="price" required min="0.01" max="1000000" step="0.01" placeholder="0.00">
+            </div>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+
+    <div class="filter-section">
+        <h3>🔍 Filter Products</h3>
+        <div class="filter-controls">
+            <div class="form-group">
+                <label for="minPrice">Minimum Price:</label>
+                <input type="number" id="minPrice" name="minPrice" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <button type="button" onclick="filterExpensive()">Filter Expensive</button>
+            <button type="button" onclick="loadProducts()">Show All</button>
+        </div>
+    </div>
+
+    <div class="products-section">
+        <h2>Products List</h2>
+        <div id="productsList" class="products-list">
+            <div class="loading">Loading products...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const API = "https://localhost:5265/api/products";
+
+    // Load products on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        loadProducts();
+    });
+
+    // Handle form submission
+    document.getElementById('productForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('productName').value;
+        const price = parseFloat(document.getElementById('productPrice').value);
+
+        try {
+            const response = await fetch(API, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, price })
+            });
+
+            if (response.ok) {
+                showMessage('Product added successfully!', 'success');
+                document.getElementById('productForm').reset();
+                loadProducts();
+            } else {
+                const error = await response.json();
+                showMessage(`Error: ${error.title || 'Failed to add product'}`, 'error');
+            }
+        } catch (error) {
+            showMessage(`Error: ${error.message}`, 'error');
+        }
+    });
+
+    // Load all products
+    async function loadProducts() {
+        try {
+            const response = await fetch(API);
+
+            if (!response.ok) {
+                throw new Error('Failed to load products');
+            }
+
+            const products = await response.json();
+            displayProducts(products);
+        } catch (error) {
+            showMessage(`Error loading products: ${error.message}`, 'error');
+            document.getElementById('productsList').innerHTML =
+                '<div class="loading">Error loading products. Please check if the API is running.</div>';
+        }
+    }
+
+    // Filter expensive products
+    async function filterExpensive() {
+        const minPrice = parseFloat(document.getElementById('minPrice').value);
+
+        if (isNaN(minPrice) || minPrice < 0) {
+            showMessage('Please enter a valid minimum price', 'error');
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API}/expensive?minPrice=${minPrice}`);
+
+            if (!response.ok) {
+                throw new Error('Failed to filter products');
+            }
+
+            const products = await response.json();
+            displayProducts(products);
+            showMessage(`Showing products with price > ${minPrice}`, 'success');
+        } catch (error) {
+            showMessage(`Error filtering products: ${error.message}`, 'error');
+        }
+    }
+
+    // Update product price
+    async function updatePrice(id, currentPrice) {
+        const newPrice = prompt(`Enter new price for this product:`, currentPrice);
+
+        if (newPrice === null) {
+            return; // User cancelled
+        }
+
+        const price = parseFloat(newPrice);
+
+        if (isNaN(price) || price < 0.01 || price > 1000000) {
+            showMessage('Price must be between 0.01 and 1,000,000', 'error');
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API}/${id}/price?newPrice=${price}`, {
+                method: 'PUT'
+            });
+
+            if (response.ok || response.status === 204) {
+                showMessage('Price updated successfully!', 'success');
+                loadProducts();
+            } else if (response.status === 404) {
+                showMessage('Product not found', 'error');
+            } else {
+                const error = await response.text();
+                showMessage(`Error: ${error || 'Failed to update price'}`, 'error');
+            }
+        } catch (error) {
+            showMessage(`Error: ${error.message}`, 'error');
+        }
+    }
+
+    // Display products in the list
+    function displayProducts(products) {
+        const productsList = document.getElementById('productsList');
+
+        if (products.length === 0) {
+            productsList.innerHTML = '<div class="loading">No products found.</div>';
+            return;
+        }
+
+        productsList.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <div class="product-info">
+                        <div class="product-name">${escapeHtml(product.name)}</div>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-update" onclick="updatePrice(${product.id}, ${product.price})">Update Price</button>
+                    </div>
+                </div>
+            `).join('');
+    }
+
+    // Show message to user
+    function showMessage(text, type) {
+        const messageDiv = document.getElementById('message');
+        messageDiv.textContent = text;
+        messageDiv.className = `message ${type} show`;
+
+        setTimeout(() => {
+            messageDiv.classList.remove('show');
+        }, 5000);
+    }
+
+    // Escape HTML to prevent XSS
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+</script>
+</body>
+</html>
