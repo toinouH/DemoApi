@@ -32,7 +32,7 @@ public class RawMaterialService : IRawMaterialService
             Name = name
         };
 
-        _context.Products.Add(rawMaterial);
+        _context.RawMaterials.Add(rawMaterial);
         await _context.SaveChangesAsync();
         return rawMaterial;
 }}
