@@ -15,7 +15,20 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
+
+// Et dans le pipeline :
+app.UseCors();
 
 app.MapOpenApi();
 
