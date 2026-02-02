@@ -6,5 +6,5 @@ public interface IRawMaterialService
 {
     Task<IEnumerable<RawMaterial>> GetAllAsync();
     Task<RawMaterial?> GetByIdAsync(int id);
-    Task<RawMaterial> CreateAsync();
+    Task<RawMaterial> CreateAsync(string name);
 }
