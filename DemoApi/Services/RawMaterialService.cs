@@ -2,11 +2,11 @@
 
 namespace DemoApi.Services;
 
-public class SupplierService : ISupplierService
+public class RawMaterialService : IRawMaterialService
 {
     private readonly AppDbContext _context;
 
-    public SupplierService(AppDbContext context)
+    public RawMaterialService(AppDbContext context)
     {
         _context = context;
     }

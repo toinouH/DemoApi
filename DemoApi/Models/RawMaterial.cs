@@ -2,7 +2,7 @@
 
 namespace DemoApi.Models;
 
-public class Supplier
+public class RawMaterial
 {
     public int Id { get; set; }
     
