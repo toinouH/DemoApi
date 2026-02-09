@@ -11,7 +11,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
 
-object value = builder.Services.AddScoped<IProductService, ProductService, IRawMaterialService, RawMaterialService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IRawMaterialService, RawMaterialService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+
 
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();

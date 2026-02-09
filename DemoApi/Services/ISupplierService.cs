@@ -4,7 +4,7 @@ namespace DemoApi.Services;
 
 public interface ISupplierService
 {
-    Task<IEnumerable<Supplier>> GetAllAsync();
-    Task<Supplier?> GetByIdAsync(int id);
-    Task<Supplier> CreateAsync();
+//    Task<IEnumerable<Supplier>> GetAllAsync();
+//    Task<Supplier?> GetByIdAsync(int id);
+//    Task<Supplier> CreateAsync();
 }
