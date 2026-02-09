@@ -36,14 +36,19 @@ public class ProductService : IProductService
             .ToListAsync();
     }
 
-    public async Task<Product> CreateAsync(string name, decimal price)
+    public async Task<Product> CreateAsync(string name, decimal price, int supplierId)
     {
         var product = new Product
         {
             Name = name,
-            Price = price
+            Price = price,
+            SupplierId=supplierId
         };
+        bool supplierExists = await _context.Suppliers
+        .AnyAsync(s => s.Id == product.SupplierId);
 
+        if (!supplierExists)
+            throw new Exception("Supplier introuvable");
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
         return product;
@@ -59,6 +64,28 @@ public class ProductService : IProductService
 
         product.Price = newPrice;
         await _context.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<IEnumerable<Product>> GetAllBySupplierAsync(int supplierId)
+    {
+        return await _context.Products
+        .AsNoTracking()
+        .Where(p => p.SupplierId == supplierId)
+        .Include(p => p.Supplier)
+        .ToListAsync();
+    }
+
+    public async Task<bool> DeleteAsync(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+
+        if (product == null)
+            return false;
+
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+
         return true;
     }
 }
