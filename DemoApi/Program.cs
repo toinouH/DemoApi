@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using DemoApi.Data;
 using DemoApi.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -11,6 +12,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(connectionString));
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IRawMaterialService, RawMaterialService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+
 
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();

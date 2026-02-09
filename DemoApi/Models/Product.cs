@@ -11,4 +11,9 @@ public class Product {
 
     [Range(0.01, 1000000, ErrorMessage = "Le prix doit être entre 0.01 et 1,000,000")]
     public decimal Price { get; set; }
+    // Clé étrangère
+    public int SupplierId { get; set; }
+
+    // Navigation vers Supplier
+    public Supplier Supplier { get; set; }
 }

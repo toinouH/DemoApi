@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lomam\\source\\repos\\DemoApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\demoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\demoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DemoApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DemoApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T13:55:42.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DemoApi\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-02T13:55:37.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "DemoApi\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T13:55:34.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemoApi",
+              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\DemoApi.csproj",
+              "RelativeDocumentMoniker": "DemoApi\\DemoApi.csproj",
+              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\DemoApi.csproj",
+              "RelativeToolTip": "DemoApi\\DemoApi.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-02T13:55:26.379Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
