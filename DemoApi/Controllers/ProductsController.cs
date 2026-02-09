@@ -48,7 +48,7 @@ public class ProductsController : ControllerBase
             return BadRequest(ModelState);
         }
 
-        var product = await _productService.CreateAsync(request.Name, request.Price);
+        var product = await _productService.CreateAsync(request.Name, request.Price,request.SupplierId);
         return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
     }
 
@@ -67,7 +67,23 @@ public class ProductsController : ControllerBase
         }
         return NoContent();
     }
+    [HttpGet("{SupplierId}")]
+    public async Task<ActionResult<IEnumerable<object>>> GetAllBySupplier(int SupplierId)
+    {
+        var Supplierproducts = await _productService.GetAllBySupplierAsync(SupplierId);
+        return Ok(Supplierproducts);
+    }
 
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var deleted = await _productService.DeleteAsync(id);
+
+        if (!deleted)
+            return NotFound();
+
+        return NoContent();
+    }
     public class CreateProductRequest
     {
         [Required(ErrorMessage = "Le nom du produit est requis")]
@@ -77,5 +93,7 @@ public class ProductsController : ControllerBase
         [Required]
         [Range(0.01, 1000000, ErrorMessage = "Le prix doit être entre 0.01 et 1,000,000")]
         public decimal Price { get; set; }
+
+        public int SupplierId { get; set; }
     }
 }
