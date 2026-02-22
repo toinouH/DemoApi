@@ -1,11 +1,16 @@
-using Microsoft.EntityFrameworkCore;
 using DemoApi.Data;
 using DemoApi.Services;
+using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddControllers();
+// Ajout des services au conteneur d'injection de dépendances et configuration des options JSON pour éviter les problèmes de références circulaires
+builder.Services.AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -14,6 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IRawMaterialService, RawMaterialService>();
 builder.Services.AddScoped<ISupplierService, SupplierService>();
+builder.Services.AddScoped<IProductRawMaterialService, ProductRawMaterialService>();
 
 
 builder.Services.AddOpenApi();

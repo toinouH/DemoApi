@@ -17,6 +17,9 @@ public class ProductService : IProductService
     {
         return await _context.Products
             .AsNoTracking()
+            .Include(p => p.Supplier)
+            .Include(p => p.ProductRawMaterials)
+                .ThenInclude(prm => prm.RawMaterial)
             .ToListAsync();
     }
 
@@ -24,6 +27,9 @@ public class ProductService : IProductService
     {
         return await _context.Products
             .AsNoTracking()
+            .Include(p => p.Supplier)
+            .Include(p => p.ProductRawMaterials)
+                .ThenInclude(prm => prm.RawMaterial)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
@@ -33,26 +39,34 @@ public class ProductService : IProductService
             .AsNoTracking()
             .Where(p => p.Price > minPrice)
             .OrderBy(p => p.Price)
+            .Include(p => p.Supplier)
             .ToListAsync();
     }
 
     public async Task<Product> CreateAsync(string name, decimal price, int supplierId)
     {
+        Supplier? supplier = await _context.Suppliers.FindAsync(supplierId);
+
+        if (supplier == null)
+            throw new Exception("Supplier introuvable");
+
         var product = new Product
         {
             Name = name,
             Price = price,
-            SupplierId=supplierId
+            SupplierId = supplierId
         };
-        bool supplierExists = await _context.Suppliers
-        .AnyAsync(s => s.Id == product.SupplierId);
 
-        if (!supplierExists)
-            throw new Exception("Supplier introuvable");
         _context.Products.Add(product);
         await _context.SaveChangesAsync();
+
         return product;
+
     }
+
+
+
+    
 
     public async Task<bool> UpdatePriceAsync(int id, decimal newPrice)
     {
@@ -87,5 +101,19 @@ public class ProductService : IProductService
         await _context.SaveChangesAsync();
 
         return true;
+    }
+
+    public async Task<IEnumerable<RawMaterial>> GetAllRawMaterialsByProductAsync(int productId)
+    {
+        var productExists = await _context.Products.AnyAsync(p => p.Id == productId);
+        if (!productExists)
+            throw new Exception("Produit introuvable");
+
+        return await _context.ProductRawMaterials
+            .AsNoTracking()
+            .Where(prm => prm.ProductId == productId)
+            .Include(prm => prm.RawMaterial)
+            .Select(prm => prm.RawMaterial)
+            .ToListAsync();
     }
 }

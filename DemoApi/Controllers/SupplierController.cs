@@ -14,9 +14,9 @@ public class SupplierController : ControllerBase
 {
     private readonly ISupplierService _supplierService;
 
-    public SupplierController(ISupplierService _supplierService)
+    public SupplierController(ISupplierService supplierService)
     {
-        _supplierService = _supplierService;
+        _supplierService = supplierService;
     }
 
     [HttpGet]
@@ -26,7 +26,7 @@ public class SupplierController : ControllerBase
         return Ok(suppliers);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<ActionResult<object>> GetById(int id)
     {
         var supplier = await _supplierService.GetByIdAsync(id);
@@ -49,7 +49,7 @@ public class SupplierController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = supplier.Id }, supplier);
     }
 
-    [HttpPut("{id}/name")]
+    [HttpPut("{id:int}/name")]
     public async Task<IActionResult> UpdateName(int id, [FromQuery] string newName)
     {
         if (newName==null)
@@ -66,7 +66,7 @@ public class SupplierController : ControllerBase
     }
 
     
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)
     {
         var (ok, error) = await _supplierService.DeleteAsync(id);

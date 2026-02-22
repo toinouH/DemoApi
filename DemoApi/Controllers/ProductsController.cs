@@ -22,7 +22,7 @@ public class ProductsController : ControllerBase
         return Ok(products);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("/product/{id:int}")]
     public async Task<ActionResult<object>> GetById(int id)
     {
         var product = await _productService.GetByIdAsync(id);
@@ -52,7 +52,7 @@ public class ProductsController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
     }
 
-    [HttpPut("{id}/price")]
+    [HttpPut("{id:int}/price")]
     public async Task<IActionResult> UpdatePrice(int id, [FromQuery] decimal newPrice)
     {
         if (newPrice < 0.01m || newPrice > 1000000m)
@@ -67,14 +67,31 @@ public class ProductsController : ControllerBase
         }
         return NoContent();
     }
-    [HttpGet("{SupplierId}")]
-    public async Task<ActionResult<IEnumerable<object>>> GetAllBySupplier(int SupplierId)
+    [HttpGet("/ProductsSupplier/{id:int}")]
+    public async Task<ActionResult<IEnumerable<object>>> GetAllBySupplier(int id)
     {
-        var Supplierproducts = await _productService.GetAllBySupplierAsync(SupplierId);
+        var Supplierproducts = await _productService.GetAllBySupplierAsync(id);
         return Ok(Supplierproducts);
     }
+    // GET api/products/{id}/rawmaterials
+    [HttpGet("{id:int}/rawmaterials")]
+    public async Task<ActionResult<IEnumerable<object>>> GetRawMaterialsByProduct(int id)
+    {
+        try
+        {
+            var rawMaterials = await _productService.GetAllRawMaterialsByProductAsync(id);
+            return Ok(rawMaterials);
+        }
+        catch (Exception ex)
+        {
+            if (ex.Message == "Produit introuvable")
+                return NotFound(new { message = ex.Message });
 
-    [HttpDelete("{id}")]
+            return BadRequest(new { message = ex.Message });
+        }
+    }
+
+    [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id)
     {
         var deleted = await _productService.DeleteAsync(id);

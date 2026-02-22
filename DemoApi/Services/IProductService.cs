@@ -13,5 +13,10 @@ public interface IProductService
     Task<IEnumerable<Product>> GetAllBySupplierAsync(int supplierId);
 
     Task<bool> DeleteAsync(int id);
+    Task<IEnumerable<RawMaterial>> GetAllRawMaterialsByProductAsync(int productId);
 
-}
+
+    
+    
+
+    }

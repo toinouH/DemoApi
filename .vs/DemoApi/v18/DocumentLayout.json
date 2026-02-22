@@ -1,22 +1,142 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lomam\\source\\repos\\DemoApi\\",
+  "WorkspaceRootPath": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\controllers\\suppliercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\iproductrawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\iproductrawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\productrawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\productrawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\models\\productrawmaterials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\models\\productrawmaterials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\controllers\\productrawmaterialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\controllers\\productrawmaterialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\rawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\rawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\controllers\\rawmaterialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\controllers\\rawmaterialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\demoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\demoapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\wwwroot\\swagger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\swagger.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\irawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\irawmaterialservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\isupplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\isupplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\models\\rawmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\models\\rawmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\services\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\services\\supplierservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\lomam\\source\\repos\\demoapi\\demoapi\\demoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\demoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\demoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|c:\\users\\aliso\\source\\repos\\projetgroupe\\demoapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5B30B4B-8EFF-402E-92F0-5B8A0CC26747}|DemoApi\\DemoApi.csproj|solutionrelative:demoapi\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,63 +145,457 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 220,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "DemoApi\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "DemoApi\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-02T13:55:42.4Z",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "DemoApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAIwFQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T16:11:25.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "DemoApi\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-02T13:55:37.898Z",
+              "Title": "SupplierController.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\SupplierController.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Controllers\\SupplierController.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\SupplierController.cs",
+              "RelativeToolTip": "DemoApi\\Controllers\\SupplierController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T14:27:07.7Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "DemoApi\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-02T13:55:34.18Z",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\index.html",
+              "RelativeToolTip": "DemoApi\\wwwroot\\index.html",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAhwGcBAACUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-02T15:40:24.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DemoApi",
-              "DocumentMoniker": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\DemoApi.csproj",
+              "Title": "IProductRawMaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IProductRawMaterialService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\IProductRawMaterialService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IProductRawMaterialService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\IProductRawMaterialService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T17:52:21.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductRawMaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ProductRawMaterialService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\ProductRawMaterialService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ProductRawMaterialService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\ProductRawMaterialService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T17:53:07.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRawMaterials.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\ProductRawMaterials.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Models\\ProductRawMaterials.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\ProductRawMaterials.cs",
+              "RelativeToolTip": "DemoApi\\Models\\ProductRawMaterials.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T17:39:15.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductRawMaterialsController.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\ProductRawMaterialsController.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Controllers\\ProductRawMaterialsController.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\ProductRawMaterialsController.cs",
+              "RelativeToolTip": "DemoApi\\Controllers\\ProductRawMaterialsController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T18:10:43.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IProductService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\IProductService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAswBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:25:47.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ProductService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\ProductService.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAUwG8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:26:13.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RawMaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\RawMaterialService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\RawMaterialService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\RawMaterialService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\RawMaterialService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAUwDYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T16:26:28.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RawMaterialsController.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\RawMaterialsController.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Controllers\\RawMaterialsController.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\RawMaterialsController.cs",
+              "RelativeToolTip": "DemoApi\\Controllers\\RawMaterialsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T17:27:17.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\Supplier.cs",
+              "RelativeToolTip": "DemoApi\\Models\\Supplier.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:20:52.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\Product.cs",
+              "RelativeToolTip": "DemoApi\\Models\\Product.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:21:04.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DemoApi.csproj",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\DemoApi.csproj",
               "RelativeDocumentMoniker": "DemoApi\\DemoApi.csproj",
-              "ToolTip": "C:\\Users\\lomam\\source\\repos\\DemoApi\\DemoApi\\DemoApi.csproj",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\DemoApi.csproj",
+              "RelativeToolTip": "DemoApi\\DemoApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-18T18:45:33.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "swagger.html",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\swagger.html",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\swagger.html",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\swagger.html",
+              "RelativeToolTip": "DemoApi\\wwwroot\\swagger.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAEwAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-02T15:40:19.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Program.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Program.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Program.cs",
+              "RelativeToolTip": "DemoApi\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:37:19.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IRawMaterialService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IRawMaterialService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\IRawMaterialService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\IRawMaterialService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\IRawMaterialService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T16:33:21.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ISupplierService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ISupplierService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\ISupplierService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\ISupplierService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\ISupplierService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:23:54.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DemoApi\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:24:20.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RawMaterial.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\RawMaterial.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Models\\RawMaterial.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\RawMaterial.cs",
+              "RelativeToolTip": "DemoApi\\Models\\RawMaterial.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T16:20:09.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "DemoApi\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwA4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:23:29.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SupplierService.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\SupplierService.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Services\\SupplierService.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Services\\SupplierService.cs",
+              "RelativeToolTip": "DemoApi\\Services\\SupplierService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T14:26:01.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\appsettings.json",
+              "RelativeDocumentMoniker": "DemoApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\appsettings.json",
+              "RelativeToolTip": "DemoApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-09T14:58:47.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DemoApi\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DemoApi\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-02T15:37:43.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "DemoApi\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "DemoApi\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-02T15:40:01.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "favicon.ico -  [English (United Kingdom)] - Icon [32x32, 32 bit, BMP]",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\favicon.ico",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\favicon.ico",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\favicon.ico -  [English (United Kingdom)] - Icon [32x32, 32 bit, BMP]",
+              "RelativeToolTip": "DemoApi\\wwwroot\\favicon.ico -  [English (United Kingdom)] - Icon [32x32, 32 bit, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2026-02-02T16:01:08.514Z",
+              "EditorCaption": " -  [English (United Kingdom)] - Icon [32x32, 32 bit, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "DemoApi\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-02T16:00:57.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "DemoApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "DemoApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-02T15:42:12.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DemoApi\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DemoApi\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-02T15:50:33.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DemoApi",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\DemoApi.csproj",
+              "RelativeDocumentMoniker": "DemoApi\\DemoApi.csproj",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\DemoApi.csproj",
               "RelativeToolTip": "DemoApi\\DemoApi.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-02T13:55:26.379Z",
+              "WhenOpened": "2026-02-02T15:42:08.079Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "DemoApi\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "DemoApi\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-02T15:37:48.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "DemoApi\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "DemoApi\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-02T15:40:04.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "DemoApi\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\DemoApi\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "DemoApi\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T15:35:33.729Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 180,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "copilot-instructions.md",
+              "DocumentMoniker": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\.github\\copilot-instructions.md",
+              "RelativeDocumentMoniker": ".github\\copilot-instructions.md",
+              "ToolTip": "C:\\Users\\aliso\\source\\repos\\ProjetGroupe\\.github\\copilot-instructions.md",
+              "RelativeToolTip": ".github\\copilot-instructions.md",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAMAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-22T16:17:05.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }
