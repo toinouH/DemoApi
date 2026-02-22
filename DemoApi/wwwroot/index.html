@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DemoApi - Product Manager</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoApi - Product & RawMaterial Manager</title>
     <style>
         * {
             margin: 0;
@@ -20,34 +20,66 @@
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             background: white;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
 
         h1 {
             color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-align: center;
         }
+
+        .message {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+            .message.success {
+                background: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+
+            .message.error {
+                background: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }
+
+            .message.show {
+                display: block;
+            }
 
         .form-section {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        .form-section h2 {
-            color: #555;
-            margin-bottom: 15px;
-            font-size: 1.3em;
+            .form-section h2 {
+                color: #555;
+                margin-bottom: 15px;
+                font-size: 1.2em;
+            }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: flex-end;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            flex: 1;
+            min-width: 180px;
+            margin-bottom: 12px;
         }
 
         label {
@@ -57,7 +89,7 @@
             font-weight: 500;
         }
 
-        input {
+        input, select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
@@ -65,11 +97,11 @@
             font-size: 14px;
         }
 
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
+            input:focus, select:focus {
+                outline: none;
+                border-color: #667eea;
+                box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+            }
 
         button {
             background: #667eea;
@@ -80,52 +112,48 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 500;
-            transition: background 0.3s;
+            transition: background .3s;
+            white-space: nowrap;
         }
 
-        button:hover {
-            background: #5568d3;
+            button:hover {
+                background: #5568d3;
+            }
+
+        .btn-update {
+            background: #28a745;
         }
 
-        button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
+            .btn-update:hover {
+                background: #218838;
+            }
+
+        .btn-danger {
+            background: #dc3545;
         }
 
-        .filter-section {
-            background: #fff3cd;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 30px;
+            .btn-danger:hover {
+                background: #c82333;
+            }
+
+        .btn-small {
+            padding: 6px 8px;
+            font-size: 12px;
+            line-height: 1;
+            border-radius: 4px;
         }
 
-        .filter-section h3 {
-            color: #856404;
-            margin-bottom: 10px;
-        }
-
-        .filter-controls {
-            display: flex;
-            gap: 10px;
-            align-items: flex-end;
-        }
-
-        .filter-controls .form-group {
-            flex: 1;
-            margin-bottom: 0;
-        }
-
-        .products-section h2 {
+        .section-title {
             color: #555;
-            margin-bottom: 15px;
+            margin: 10px 0 10px 0;
         }
 
-        .products-list {
+        .list {
             display: grid;
             gap: 15px;
         }
 
-        .product-card {
+        .card {
             background: #f8f9fa;
             padding: 15px;
             border-radius: 6px;
@@ -133,57 +161,28 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
         }
 
-        .product-info {
+        .info {
             flex: 1;
         }
 
-        .product-name {
+        .name {
             font-weight: 600;
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
-        .product-price {
+        .sub {
             color: #666;
             font-size: 0.9em;
         }
 
-        .product-actions {
+        .actions {
             display: flex;
             gap: 10px;
-        }
-
-        .btn-update {
-            background: #28a745;
-        }
-
-        .btn-update:hover {
-            background: #218838;
-        }
-
-        .message {
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            display: none;
-        }
-
-        .message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        .message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        .message.show {
-            display: block;
+            flex-wrap: wrap;
         }
 
         .loading {
@@ -191,320 +190,618 @@
             padding: 20px;
             color: #666;
         }
+
+        .hint {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 8px;
+        }
+
+        /* Modal */
+        #linkModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+            #linkModal .modal-content {
+                background: white;
+                padding: 20px;
+                width: 380px;
+                border-radius: 8px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            }
+
+            #linkModal .modal-actions {
+                display: flex;
+                gap: 10px;
+                justify-content: flex-end;
+                margin-top: 12px;
+            }
+
+        .raw-item {
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            margin-right: 8px;
+            margin-bottom: 6px;
+            background: #fff;
+            padding: 6px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            border: 1px solid #e6e6e6;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>📦 DemoApi - Product Manager</h1>
+        <div id="messageProducts" class="message"></div>
 
-        <div id="message" class="message"></div>
-
+        <!-- Add Product -->
         <div class="form-section">
             <h2>Add New Product</h2>
             <form id="productForm">
-                <div class="form-group">
-                    <label for="productName">Product Name:</label>
-                    <input type="text" id="productName" name="name" required minlength="1" placeholder="Enter product name">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" required minlength="1" placeholder="Enter product name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input type="number" id="productPrice" required min="0.01" max="1000000" step="0.01" placeholder="0.00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="supplierId">Supplier</label>
+                        <select id="supplierId" required>
+                            <option value="">Loading suppliers...</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Add Product</button>
+                    <button type="button" onclick="loadProducts()">Show All</button>
                 </div>
-                <div class="form-group">
-                    <label for="productPrice">Price:</label>
-                    <input type="number" id="productPrice" name="price" required min="0.01" max="1000000" step="0.01" placeholder="0.00">
-                </div>
-                <button type="submit">Add Product</button>
             </form>
         </div>
 
-        <div class="filter-section">
-            <h3>🔍 Filter Products</h3>
-            <div class="filter-controls">
+        <!-- Filter Products -->
+        <div class="form-section" style="background:#fff3cd;">
+            <h2 style="color:#856404;">🔍 Filter Products</h2>
+            <div class="form-row">
                 <div class="form-group">
-                    <label for="minPrice">Minimum Price:</label>
-                    <input type="number" id="minPrice" name="minPrice" min="0" step="0.01" placeholder="0.00">
+                    <label for="minPrice">Minimum Price</label>
+                    <input type="number" id="minPrice" min="0" step="0.01" placeholder="0.00">
                 </div>
                 <button type="button" onclick="filterExpensive()">Filter Expensive</button>
-                <button type="button" onclick="loadProducts()">Show All</button>
+                <button type="button" onclick="loadProducts()">Reset</button>
             </div>
         </div>
 
-        <div class="products-section">
-            <h2>Products List</h2>
-            <div id="productsList" class="products-list">
-                <div class="loading">Loading products...</div>
-            </div>
+        <!-- Products List -->
+        <h2 class="section-title">Products List</h2>
+        <div id="productsList" class="list">
+            <div class="loading">Loading products...</div>
         </div>
     </div>
 
-    <script>
-        const API = "http://localhost:5265/api/products";
-
-        // Load products on page load
-        window.addEventListener('DOMContentLoaded', () => {
-            loadProducts();
-        });
-
-        // Handle form submission
-        document.getElementById('productForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('productName').value;
-            const price = parseFloat(document.getElementById('productPrice').value);
-
-            try {
-                const response = await fetch(API, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ name, price })
-                });
-
-                if (response.ok) {
-                    showMessage('Product added successfully!', 'success');
-                    document.getElementById('productForm').reset();
-                    loadProducts();
-                } else {
-                    const error = await response.json();
-                    showMessage(`Error: ${error.title || 'Failed to add product'}`, 'error');
-                }
-            } catch (error) {
-                showMessage(`Error: ${error.message}`, 'error');
-            }
-        });
-
-        // Load all products
-        async function loadProducts() {
-            try {
-                const response = await fetch(API);
-
-                if (!response.ok) {
-                    throw new Error('Failed to load products');
-                }
-
-                const products = await response.json();
-                displayProducts(products);
-            } catch (error) {
-                showMessage(`Error loading products: ${error.message}`, 'error');
-                document.getElementById('productsList').innerHTML =
-                    '<div class="loading">Error loading products. Please check if the API is running.</div>';
-            }
-        }
-
-        // Filter expensive products
-        async function filterExpensive() {
-            const minPrice = parseFloat(document.getElementById('minPrice').value);
-
-            if (isNaN(minPrice) || minPrice < 0) {
-                showMessage('Please enter a valid minimum price', 'error');
-                return;
-            }
-
-            try {
-                const response = await fetch(`${API}/expensive?minPrice=${minPrice}`);
-
-                if (!response.ok) {
-                    throw new Error('Failed to filter products');
-                }
-
-                const products = await response.json();
-                displayProducts(products);
-                showMessage(`Showing products with price > ${minPrice}`, 'success');
-            } catch (error) {
-                showMessage(`Error filtering products: ${error.message}`, 'error');
-            }
-        }
-
-        // Update product price
-        async function updatePrice(id, currentPrice) {
-            const newPrice = prompt(`Enter new price for this product:`, currentPrice);
-
-            if (newPrice === null) {
-                return; // User cancelled
-            }
-
-            const price = parseFloat(newPrice);
-
-            if (isNaN(price) || price < 0.01 || price > 1000000) {
-                showMessage('Price must be between 0.01 and 1,000,000', 'error');
-                return;
-            }
-
-            try {
-                const response = await fetch(`${API}/${id}/price?newPrice=${price}`, {
-                    method: 'PUT'
-                });
-
-                if (response.ok || response.status === 204) {
-                    showMessage('Price updated successfully!', 'success');
-                    loadProducts();
-                } else if (response.status === 404) {
-                    showMessage('Product not found', 'error');
-                } else {
-                    const error = await response.text();
-                    showMessage(`Error: ${error || 'Failed to update price'}`, 'error');
-                }
-            } catch (error) {
-                showMessage(`Error: ${error.message}`, 'error');
-            }
-        }
-
-        // Display products in the list
-        function displayProducts(products) {
-            const productsList = document.getElementById('productsList');
-
-            if (products.length === 0) {
-                productsList.innerHTML = '<div class="loading">No products found.</div>';
-                return;
-            }
-
-            productsList.innerHTML = products.map(product => `
-                    <div class="product-card">
-                        <div class="product-info">
-                            <div class="product-name">${escapeHtml(product.name)}</div>
-                            <div class="product-price">$${product.price.toFixed(2)}</div>
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn-update" onclick="updatePrice(${product.id}, ${product.price})">Update Price</button>
-                        </div>
-                    </div>
-                `).join('');
-        }
-
-        // Show message to user
-        function showMessage(text, type) {
-            const messageDiv = document.getElementById('message');
-            messageDiv.textContent = text;
-            messageDiv.className = `message ${type} show`;
-
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 5000);
-        }
-
-        // Escape HTML to prevent XSS
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-    </script>
     <div class="container">
-        <h1>📦 DemoApi - RawMaterial Manager</h1>
+        <h1>🧱 DemoApi - RawMaterial Manager</h1>
+        <div id="messageRaw" class="message"></div>
 
-        <div id="message" class="message"></div>
-
+        <!-- Add RawMaterial -->
         <div class="form-section">
             <h2>Add New Raw Material</h2>
             <form id="rawMaterialForm">
-                <div class="form-group">
-                    <label for="rawMaterialName">RawMaterial Name:</label>
-                    <input type="text" id="rawMaterialName" name="name" required minlength="1" placeholder="Enter raw material name">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rawMaterialName">RawMaterial Name</label>
+                        <input type="text" id="rawMaterialName" required minlength="1" placeholder="Enter raw material name">
+                    </div>
+                    <button type="submit">Add Raw Material</button>
+                    <button type="button" onclick="loadRawMaterials()">Show All</button>
                 </div>
-                
-                <button type="submit">Add Raw Material</button>
             </form>
         </div>
 
-        
+        <!-- RawMaterials List -->
+        <h2 class="section-title">RawMaterials List</h2>
+        <div id="rawMaterialsList" class="list">
+            <div class="loading">Loading raw materials...</div>
+        </div>
+    </div>
 
-        <div class="rawMaterials-section">
-            <h2>RawMaterials List</h2>
-            <div id="rawMaterialsList" class="rawMaterials-list">
-                <div class="loading">Loading products...</div>
+    <!-- Supplier management -->
+    <div class="container">
+        <h1>🏷️ Supplier Management</h1>
+        <div id="messageSuppliers" class="message"></div>
+
+        <div class="form-section">
+            <h2>Add Supplier</h2>
+            <form id="supplierForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="supplierName">Supplier Name</label>
+                        <input type="text" id="supplierName" required minlength="1" placeholder="Enter supplier name">
+                    </div>
+                    <button type="submit">Add Supplier</button>
+                    <button type="button" onclick="loadSuppliers()">Show All</button>
+                </div>
+            </form>
+        </div>
+
+        <h2 class="section-title">Suppliers List</h2>
+        <div id="suppliersList" class="list">
+            <div class="loading">Loading suppliers...</div>
+        </div>
+    </div>
+
+    <!-- Associate modal -->
+    <div id="linkModal">
+        <div class="modal-content">
+            <h3 id="linkModalTitle">Associate raw material</h3>
+            <div class="form-group">
+                <label for="modalRawSelect">Raw Material</label>
+                <select id="modalRawSelect"></select>
             </div>
+            <div class="form-group">
+                <label for="modalQty">Quantity</label>
+                <!-- quantity must be integer (server expects int) -->
+                <input id="modalQty" type="number" min="1" step="1" value="1" />
+            </div>
+            <div class="modal-actions">
+                <button type="button" onclick="closeLinkModal()">Cancel</button>
+                <button type="button" class="btn-update" onclick="(async ()=> { await addLinkFromModal(); closeLinkModal(); })()">Associate</button>            </div>
         </div>
     </div>
 
     <script>
-        const API = "https://localhost:5265/api/rawMaterials";
+        // ✅ Mets ici l'URL exacte de ton API (même que Swagger)
+        const BASE_URL = "https://localhost:7292";
 
-        // Load products on page load
+        const PRODUCTS_API = `${BASE_URL}/api/products`;
+        const RAW_API = `${BASE_URL}/api/rawmaterials`;
+        const SUPPLIERS_API = `${BASE_URL}/api/supplier`;
+
+        // NOTE: server exposes ProductRawMaterialsController at /api/ProductRawMaterials
+        // POST expects productId as query parameter and body { rawMaterialId, quantity }
+        // DELETE expects route /api/ProductRawMaterials/{rawMaterialId}?productId={productId}
+        const PRODUCT_RAW_LINK = (productId) => `${BASE_URL}/api/ProductRawMaterials?productId=${encodeURIComponent(productId)}`;
+        const PRODUCT_RAW_LINK_DELETE = (productId, rawId) => `${BASE_URL}/api/ProductRawMaterials/${encodeURIComponent(rawId)}?productId=${encodeURIComponent(productId)}`;
+
+        // Caches
+        let rawMaterialsCache = [];
+        let suppliersCache = [];
+        let currentLinkProductId = null;
+
         window.addEventListener('DOMContentLoaded', () => {
+            loadSuppliers(); // populate supplier dropdown and supplier list
             loadRawMaterials();
+            loadProducts();
         });
 
-        // Handle form submission
-        document.getElementById('rawMaterialForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('rawMaterialName').value;
-
+        // ---------------- Suppliers ----------------
+        async function loadSuppliers() {
+            const select = document.getElementById('supplierId');
+            const suppliersListEl = document.getElementById('suppliersList');
+            select.innerHTML = '<option value="">Loading suppliers...</option>';
+            suppliersListEl.innerHTML = '<div class="loading">Loading suppliers...</div>';
             try {
-                const response = await fetch(API, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ name })
-                });
+                const res = await fetch(SUPPLIERS_API);
+                if (!res.ok) throw new Error('Failed to load suppliers');
+                const suppliers = await res.json();
+                suppliersCache = Array.isArray(suppliers) ? suppliers : [];
 
-                if (response.ok) {
-                    showMessage('Material added successfully!', 'success');
-                    document.getElementById('rawMaterialForm').reset();
-                    loadRawMaterials();
+                // dropdown
+                if (!Array.isArray(suppliersCache) || suppliersCache.length === 0) {
+                    select.innerHTML = '<option value="">No suppliers</option>';
                 } else {
-                    const error = await response.json();
-                    showMessage(`Error: ${error.title || 'Failed to add material'}`, 'error');
-                }
-            } catch (error) {
-                showMessage(`Error: ${error.message}`, 'error');
-            }
-        });
-
-        // Load all products
-        async function loadRawMaterials() {
-            try {
-                const response = await fetch(API);
-
-                if (!response.ok) {
-                    throw new Error('Failed to load products');
+                    select.innerHTML = '<option value="">Select supplier...</option>' +
+                        suppliersCache.map(s => `<option value="${s.id}">${escapeHtml(s.name ?? '')}</option>`).join('');
                 }
 
-                const rawMaterials = await response.json();
-                displayRawMaterials(rawMaterials);
-            } catch (error) {
-                showMessage(`Error loading products: ${error.message}`, 'error');
-                document.getElementById('rawMaterialsList').innerHTML =
-                    '<div class="loading">Error loading products. Please check if the API is running.</div>';
+                // suppliers list (delete only)
+                if (!Array.isArray(suppliersCache) || suppliersCache.length === 0) {
+                    suppliersListEl.innerHTML = '<div class="loading">No suppliers found.</div>';
+                } else {
+                    suppliersListEl.innerHTML = suppliersCache.map(s => `
+                                <div class="card">
+                                    <div class="info">
+                                        <div class="name">${escapeHtml(s.name ?? '')}</div>
+                                        <div class="sub">Id: ${s.id ?? '-'}</div>
+                                    </div>
+                                    <div class="actions">
+                                        <button class="btn-danger btn-small" onclick="deleteSupplier(${s.id})">Delete</button>
+                                    </div>
+                                </div>
+                            `).join('');
+                }
+            } catch (err) {
+                select.innerHTML = '<option value="">Error loading suppliers</option>';
+                suppliersListEl.innerHTML = '<div class="loading">Error loading suppliers.</div>';
+                showMessage(`Error loading suppliers: ${err.message}`, 'error', 'messageSuppliers');
             }
         }
 
-  
+        document.getElementById('supplierForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('supplierName').value.trim();
+            if (!name) {
+                showMessage('Nom requis', 'error', 'messageSuppliers');
+                return;
+            }
+            try {
+                const res = await fetch(SUPPLIERS_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name })
+                });
+                if (res.ok) {
+                    showMessage('Supplier ajouté', 'success', 'messageSuppliers');
+                    e.target.reset();
+                    await loadSuppliers();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error adding supplier: ${txt}`, 'error', 'messageSuppliers');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageSuppliers');
+            }
+        });
 
-        // Display materials in the list
-        function displayProducts(rawMaterials) {
-            const rawMaterialsList = document.getElementById('rawMaterialsList');
+        async function deleteSupplier(id) {
+            if (!confirm('Supprimer ce fournisseur ?')) return;
+            try {
+                const res = await fetch(`${SUPPLIERS_API}/${id}`, { method: 'DELETE' });
+                if (res.ok || res.status === 204) {
+                    showMessage('Supplier deleted', 'success', 'messageSuppliers');
+                    await loadSuppliers();
+                    await loadProducts();
+                } else if (res.status === 409) {
+                    const txt = await safeText(res);
+                    showMessage(`Cannot delete supplier: ${txt}`, 'error', 'messageSuppliers');
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error deleting supplier: ${txt}`, 'error', 'messageSuppliers');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageSuppliers');
+            }
+        }
 
-            if (rawMaterials.length === 0) {
-                rawMaterialsList.innerHTML = '<div class="loading">No products found.</div>';
+        // ---------------- Products ----------------
+        document.getElementById('productForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('productName').value.trim();
+            const price = Number(document.getElementById('productPrice').value);
+            const supplierId = Number(document.getElementById('supplierId').value);
+
+            if (!supplierId || supplierId < 1) {
+                showMessage('Please select a supplier', 'error', 'messageProducts');
                 return;
             }
 
-            rawMaterialsList.innerHTML = rawMaterials.map(rawMaterial => `
-                    <div class="product-card">
-                        <div class="product-info">
-                            <div class="product-name">${escapeHtml(rawMaterial.name)}</div>
+            try {
+                const res = await fetch(PRODUCTS_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, price, supplierId })
+                });
+
+                if (res.ok) {
+                    showMessage('Product added successfully!', 'success', 'messageProducts');
+                    e.target.reset();
+                    loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error adding product: ${txt}`, 'error', 'messageProducts');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageProducts');
+            }
+        });
+
+        async function loadProducts() {
+            const el = document.getElementById('productsList');
+            el.innerHTML = '<div class="loading">Loading products...</div>';
+
+            try {
+                const res = await fetch(PRODUCTS_API);
+                if (!res.ok) throw new Error('Failed to load products');
+
+                const products = await res.json();
+                displayProducts(products);
+            } catch (err) {
+                showMessage(`Error loading products: ${err.message}`, 'error', 'messageProducts');
+                el.innerHTML = '<div class="loading">Error loading products. Check API/port/protocol.</div>';
+            }
+        }
+
+        async function filterExpensive() {
+            const minPrice = Number(document.getElementById('minPrice').value);
+
+            if (Number.isNaN(minPrice) || minPrice < 0) {
+                showMessage('Please enter a valid minimum price', 'error', 'messageProducts');
+                return;
+            }
+
+            try {
+                const res = await fetch(`${PRODUCTS_API}/expensive?minPrice=${encodeURIComponent(minPrice)}`);
+                if (!res.ok) throw new Error('Failed to filter products');
+
+                const products = await res.json();
+                displayProducts(products);
+                showMessage(`Showing products with price > ${minPrice}`, 'success', 'messageProducts');
+            } catch (err) {
+                showMessage(`Error filtering products: ${err.message}`, 'error', 'messageProducts');
+            }
+        }
+
+        async function updatePrice(id, currentPrice) {
+            const newPrice = prompt('Enter new price for this product:', String(currentPrice));
+            if (newPrice === null) return;
+
+            const price = Number(newPrice);
+            if (Number.isNaN(price) || price < 0.01 || price > 1000000) {
+                showMessage('Price must be between 0.01 and 1,000,000', 'error', 'messageProducts');
+                return;
+            }
+
+            try {
+                const res = await fetch(`${PRODUCTS_API}/${id}/price?newPrice=${encodeURIComponent(price)}`, {
+                    method: 'PUT'
+                });
+
+                if (res.ok || res.status === 204) {
+                    showMessage('Price updated successfully!', 'success', 'messageProducts');
+                    loadProducts();
+                } else if (res.status === 404) {
+                    showMessage('Product not found', 'error', 'messageProducts');
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error updating price: ${txt}`, 'error', 'messageProducts');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageProducts');
+            }
+        }
+
+        async function deleteProduct(id) {
+            if (!confirm('Delete this product?')) return;
+            try {
+                const res = await fetch(`${PRODUCTS_API}/${id}`, { method: 'DELETE' });
+                if (res.ok || res.status === 204) {
+                    showMessage('Product deleted', 'success', 'messageProducts');
+                    await loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error deleting product: ${txt}`, 'error', 'messageProducts');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageProducts');
+            }
+        }
+
+        function displayProducts(products) {
+            const el = document.getElementById('productsList');
+
+            if (!Array.isArray(products) || products.length === 0) {
+                el.innerHTML = '<div class="loading">No products found.</div>';
+                return;
+            }
+
+            el.innerHTML = products.map(p => {
+                // supplier name (falls back to supplierId if absent)
+                const supplierName = (p.supplier && p.supplier.name) ? escapeHtml(p.supplier.name) : (p.supplierId ?? '-');
+
+                // raw materials names if included via ProductRawMaterials -> RawMaterial
+                let rawHtml = '<span class="sub">No raw materials</span>';
+                if (Array.isArray(p.productRawMaterials) && p.productRawMaterials.length > 0) {
+                    rawHtml = p.productRawMaterials.map(prm => {
+                        const rawName = prm.rawMaterial && prm.rawMaterial.name ? escapeHtml(prm.rawMaterial.name) : ('#' + (prm.rawMaterialId ?? prm.rawMaterial?.id ?? '?'));
+                        const qty = prm.quantity ?? '';
+                        const rawId = prm.rawMaterial ? prm.rawMaterial.id : (prm.rawMaterialId ?? '');
+                        // delete button will call deleteLink(productId, rawId)
+                        return `<span class="raw-item">${rawName} (${qty}) <button class="btn-danger btn-small" onclick="deleteLink(${p.id}, ${rawId})">Del</button></span>`;
+                    }).join('');
+                }
+
+                // Associate raw material button will open modal to choose raw material
+                return `
+              <div class="card">
+                <div class="info">
+                  <div class="name">${escapeHtml(p.name ?? '')}</div>
+                  <div class="sub">Price: ${Number(p.price ?? 0).toFixed(2)} | Supplier: ${supplierName}</div>
+                  <div class="sub">RawMaterials: <div style="margin-top:6px">${rawHtml}</div></div>
+                </div>
+                <div class="actions">
+                  <button class="btn-update" onclick="updatePrice(${p.id}, ${Number(p.price ?? 0)})">Update Price</button>
+                  <button class="btn-danger btn-small" onclick="deleteProduct(${p.id})">Delete</button>
+                  <button onclick="openLinkModal(${p.id})">Associate raw material</button>
+                </div>
+              </div>
+            `;
+            }).join('');
+        }
+
+        // ---------------- RawMaterials ----------------
+        document.getElementById('rawMaterialForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('rawMaterialName').value.trim();
+
+            try {
+                const res = await fetch(RAW_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name })
+                });
+
+                if (res.ok) {
+                    showMessage('Raw material added successfully!', 'success', 'messageRaw');
+                    e.target.reset();
+                    await loadRawMaterials();
+                    await loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error adding raw material: ${txt}`, 'error', 'messageRaw');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageRaw');
+            }
+        });
+
+        async function loadRawMaterials() {
+            const el = document.getElementById('rawMaterialsList');
+            el.innerHTML = '<div class="loading">Loading raw materials...</div>';
+
+            try {
+                const res = await fetch(RAW_API);
+                if (!res.ok) throw new Error('Failed to load raw materials');
+
+                const items = await res.json();
+                rawMaterialsCache = Array.isArray(items) ? items : [];
+                displayRawMaterials(rawMaterialsCache);
+            } catch (err) {
+                showMessage(`Error loading raw materials: ${err.message}`, 'error', 'messageRaw');
+                el.innerHTML = '<div class="loading">Error loading raw materials. Check API/port/protocol.</div>';
+            }
+        }
+
+        function displayRawMaterials(items) {
+            const el = document.getElementById('rawMaterialsList');
+
+            if (!Array.isArray(items) || items.length === 0) {
+                el.innerHTML = '<div class="loading">No raw materials found.</div>';
+                return;
+            }
+
+            el.innerHTML = items.map(r => `
+                      <div class="card">
+                        <div class="info">
+                          <div class="name">${escapeHtml(r.name ?? '')}</div>
+                          <div class="sub">Id: ${r.id ?? '-'}</div>
                         </div>
-                        
-                    </div>
-                `).join('');
+                        <div class="actions">
+                          <button class="btn-danger btn-small" onclick="deleteRawMaterial(${r.id})">Delete</button>
+                        </div>
+                      </div>
+                    `).join('');
         }
 
-        // Show message to user
-        function showMessage(text, type) {
-            const messageDiv = document.getElementById('message');
-            messageDiv.textContent = text;
-            messageDiv.className = `message ${type} show`;
-
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 5000);
+        async function deleteRawMaterial(id) {
+            if (!confirm('Delete this raw material?')) return;
+            try {
+                const res = await fetch(`${RAW_API}/${id}`, { method: 'DELETE' });
+                if (res.ok || res.status === 204) {
+                    showMessage('Raw material deleted', 'success', 'messageRaw');
+                    await loadRawMaterials();
+                    await loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error deleting raw material: ${txt}`, 'error', 'messageRaw');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageRaw');
+            }
         }
 
-        // Escape HTML to prevent XSS
+        // ---------------- Associate Product <-> RawMaterial (modal) ----------------
+        function openLinkModal(productId) {
+            currentLinkProductId = productId;
+            const modal = document.getElementById('linkModal');
+            const select = document.getElementById('modalRawSelect');
+
+            if (!Array.isArray(rawMaterialsCache) || rawMaterialsCache.length === 0) {
+                select.innerHTML = '<option value="">No raw materials</option>';
+            } else {
+                select.innerHTML = '<option value="">Select raw material...</option>' +
+                    rawMaterialsCache.map(r => `<option value="${r.id}">${escapeHtml(r.name ?? '')}</option>`).join('');
+            }
+
+            document.getElementById('modalQty').value = '1';
+            document.getElementById('linkModalTitle').textContent = `Associate raw material to product #${productId}`;
+            modal.style.display = 'flex';
+        }
+
+        function closeLinkModal() {
+            currentLinkProductId = null;
+            document.getElementById('linkModal').style.display = 'none';
+        }
+
+        async function addLinkFromModal() {
+            const productId = currentLinkProductId;
+            const rawId = Number(document.getElementById('modalRawSelect').value);
+            const qty = parseInt(document.getElementById('modalQty').value, 10);
+
+            // validate integer quantity (server expects int)
+            if (!productId || !rawId || Number.isNaN(qty) || qty <= 0) {
+                showMessage('Please choose a valid raw material and enter quantity >= 1', 'error', 'messageProducts');
+                return;
+            }
+
+            try {
+                // POST to /api/ProductRawMaterials?productId=...
+                const res = await fetch(PRODUCT_RAW_LINK(productId), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ rawMaterialId: rawId, quantity: qty })
+                });
+
+                if (res.ok || res.status === 204) {
+                    showMessage('Associated', 'success', 'messageProducts');
+                    closeLinkModal();
+                    await loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error associating: ${txt}`, 'error', 'messageProducts');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageProducts');
+            }
+        }
+
+        async function deleteLink(productId, rawId) {
+            if (!confirm('Remove this association ?')) return;
+            try {
+                // DELETE to /api/ProductRawMaterials/{rawId}?productId={productId}
+                const res = await fetch(PRODUCT_RAW_LINK_DELETE(productId, rawId), { method: 'DELETE' });
+                if (res.ok || res.status === 204) {
+                    showMessage('Association removed', 'success', 'messageProducts');
+                    await loadProducts();
+                } else {
+                    const txt = await safeText(res);
+                    showMessage(`Error removing association: ${txt}`, 'error', 'messageProducts');
+                }
+            } catch (err) {
+                showMessage(`Error: ${err.message}`, 'error', 'messageProducts');
+            }
+        }
+
+        // ---------------- Helpers ----------------
+        function showMessage(text, type, elementId) {
+            const msg = document.getElementById(elementId);
+            if (!msg) return;
+            msg.textContent = text;
+            msg.className = `message ${type} show`;
+            setTimeout(() => msg.classList.remove('show'), 5000);
+        }
+
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        async function safeText(res) {
+            try { return await res.text(); } catch { return ''; }
         }
     </script>
 </body>

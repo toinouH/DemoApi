@@ -9,4 +9,8 @@ public class RawMaterial
     [Required(ErrorMessage = "Le nom du produit est requis")]
     [MinLength(1, ErrorMessage = "Le nom doit contenir au moins 1 caractère")]
     public string Name { get; set; } = string.Empty;
+    /*public int ProductId { get; set; }
+    public Product? Product { get; set; }*/
+
+    public ICollection<ProductRawMaterials> ProductRawMaterials { get; set; } = new List<ProductRawMaterials>();
 }

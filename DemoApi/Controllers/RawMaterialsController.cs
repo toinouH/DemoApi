@@ -34,7 +34,23 @@ public class RawMaterialsController : ControllerBase
         return Ok(rawMaterial);
     }
 
-    
+    [HttpGet("/ProductRawMaterials/{id:int}")]
+    public async Task<ActionResult<IEnumerable<object>>> GetAllByProduct(int id)
+    {
+        var ProductRawMaterials = await _rawMaterialService.GetAllByProductAsync(id);
+        return Ok(ProductRawMaterials);
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var deleted = await _rawMaterialService.DeleteAsync(id);
+
+        if (!deleted)
+            return NotFound();
+
+        return NoContent();
+    }
 
     [HttpPost]
     public async Task<ActionResult<object>> Create([FromBody] CreaterawMaterialRequest request)
@@ -55,7 +71,6 @@ public class RawMaterialsController : ControllerBase
         [Required(ErrorMessage = "Le nom de la matiere premiere est requis")]
         [MinLength(1, ErrorMessage = "Le nom doit contenir au moins 1 caractère")]
         public string Name { get; set; } = string.Empty;
-
        
     }
 }

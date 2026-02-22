@@ -27,6 +27,7 @@ public class RawMaterialService : IRawMaterialService
     }
     public async Task<RawMaterial> CreateAsync(string name)
     {
+
         var rawMaterial = new RawMaterial
         {
             Name = name
@@ -35,4 +36,34 @@ public class RawMaterialService : IRawMaterialService
         _context.RawMaterials.Add(rawMaterial);
         await _context.SaveChangesAsync();
         return rawMaterial;
-}}
+    }
+
+
+    public async Task<IEnumerable<RawMaterial>> GetAllByProductAsync(int productId)
+    {
+        Product? product = await _context.Products.FindAsync(productId);
+
+        if (product == null)
+            throw new Exception("Supplier introuvable");
+
+        return await _context.RawMaterials
+        .AsNoTracking()
+        .Where(r => r.Id == productId)
+        .Include(r => r.ProductRawMaterials)
+            .ThenInclude(prm=>prm.Product)
+        .ToListAsync();
+    }
+
+    public async Task<bool> DeleteAsync(int id)
+    {
+        var rawMaterial = await _context.RawMaterials.FindAsync(id);
+
+        if (rawMaterial == null)
+            return false;
+
+        _context.RawMaterials.Remove(rawMaterial);
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+}

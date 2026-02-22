@@ -39,6 +39,7 @@ public class SupplierService : ISupplierService
     {
         return await _context.Suppliers
             .AsNoTracking()
+            .Include(s => s.Products)
             .ToListAsync();
     }
 
@@ -46,6 +47,7 @@ public class SupplierService : ISupplierService
     {
         return await _context.Suppliers
             .AsNoTracking()
+            .Include(s => s.Products)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
 
@@ -58,10 +60,10 @@ public class SupplierService : ISupplierService
             return (false, "Supplier introuvable");
 
         bool hasProducts = await _context.Products
-            .AnyAsync(p => p.SupplierId == id);
+            .AnyAsync(p => p.Supplier == supplier);
 
         if (hasProducts)
-            return (false, "Impossible de supprimer : des produits sont encore liés à ce supplier.");
+            return (false, "Impossible de supprimer : des produits sont encore liés à ce fournisseur.");
 
         _context.Suppliers.Remove(supplier);
         await _context.SaveChangesAsync();
